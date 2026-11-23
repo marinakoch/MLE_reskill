@@ -1,4 +1,4 @@
-# MLE_Penguins
+# EDA Penguins
 
 ## Установка и запуск
 
