@@ -29,8 +29,8 @@ def run_eda(name, sample_n=None,
     if heatmap_cols:
         plot_heatmap(penguins, cols=heatmap_cols)
     if scatter_configs:
-        for x, y, hue in scatter_configs:
-            plot_scatter(penguins, x, y, hue)
+        for x, y, hue, s_title in scatter_configs:
+            plot_scatter(penguins, x, y, hue, s_title)
     if groupby_configs:
         print(groupby_stats(penguins, cols=groupby_configs))
 
