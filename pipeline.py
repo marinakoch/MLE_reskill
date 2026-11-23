@@ -42,8 +42,8 @@ penguin = run_eda(
     hist_cols=['flipper_length_mm', 'body_mass_g'],
     box_configs=[('species','bill_length_mm'), ('species','body_mass_g')],    
     corr_pairs=[('bill_length_mm','flipper_length_mm'), ('flipper_length_mm','body_mass_g'), ('bill_length_mm','bill_depth_mm')],
-    heatmap_cols=[],
-    scatter_configs=[('bill_length_mm', 'bill_depth_mm', 'species'), ('flipper_length_mm', 'body_mass_g', 'species')],
+    heatmap_cols=['species','bill_length_mm'],
+    scatter_configs=[('bill_length_mm', 'bill_depth_mm', 'species', 'Длина vs Глубина клюва (парадокс Симпсона!)'), ('flipper_length_mm', 'body_mass_g', 'species', 'Ласты vs Масса')],
     groupby_configs=['bill_length_mm','body_mass_g'],
     missing_kw=dict(fill_median=['bill_length_mm','bill_depth_mm','flipper_length_mm','body_mass_g'], fill_mode=['sex']),
 )

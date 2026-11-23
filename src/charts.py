@@ -48,9 +48,9 @@ def plot_heatmap(penguins, cols=None, figsize=(10, 8)):
 def plot_scatter(penguins, x, y, hue, figsize=(10, 6), **kwargs):
     fig, axes = plt.subplots(1, 2, figsize=(16, 5))
 
-    sns.scatterplot(data=penguins, x='bill_length_mm', y='bill_depth_mm',
+    sns.scatterplot(data=penguins, x=x, y=y,
                 hue='species', palette='Set2', alpha=0.7, ax=axes[0])
-    axes[0].set_title('Длина vs Глубина клюва (парадокс Симпсона!)')
+    axes[0].set_title(kwargs'Длина vs Глубина клюва (парадокс Симпсона!)')
 
     sns.scatterplot(data=penguins, x='flipper_length_mm', y='body_mass_g',
                 hue='species', palette='Set2', alpha=0.7, ax=axes[1])
