@@ -44,12 +44,12 @@ def run_eda(name, sample_n=None,
 
 # Пример запуска для Титаника:
 titanic = run_eda(
-    'diamonds',
-    hist_cols=['price', 'carat'],
-    box_configs=[('cut','price'), ('color','price')],
-    bar_configs=[('cut', 'price'), ('clarity', 'price')],
-    corr_pairs=[('carat','price'), ('depth','price'), ('x','price')],
-    heatmap_cols=['carat','depth','table','price','x','y','z'],
-    scatter_configs=[('carat', 'price', 'cut'), ('carat', 'price', 'color')],
-    groupby_configs=[('cut', 'price')]
+    'titanic',
+    hist_cols=['age', 'fare'],
+    box_configs=[('pclass', 'age'), ('pclass', 'fare')],
+    bar_configs=[('sex', 'survived'), ('pclass', 'survived')],
+    corr_pairs=[('age', 'fare'), ('fare', 'survived'), ('pclass', 'survived')],
+    scatter_configs=[('age', 'fare', 'survived'), ('age', 'fare', 'pclass')],
+    groupby_configs=[('sex', 'survived'), ('pclass', 'survived')],
+    missing_kw=dict(fill_median=['age'], fill_mode=['embarked', 'embark_town'], drop_cols=['deck']),
 )
