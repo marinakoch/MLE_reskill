@@ -1,4 +1,4 @@
-# EDA Titanic
+# EDA Diamonds
 
 ## Установка и запуск
 
